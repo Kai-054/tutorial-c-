@@ -277,15 +277,125 @@ void bai24() {
     }
 }
 
-void bai25() {}
-void bai26() {}
-void bai27() {}
-void bai28() {}
-void bai29() {}
+void bai25() {
+    int a, b, c;
+    cin >> a >> b >> c;
+    if (a <= 0 || b<=0 || c <= 0 ) {
+        cout << "NO" << endl;
+    }
+    else {
+        cout << "YES" << endl;
+    }
+}
+void bai26() {
+    int a, b, c;
+    cin >> a >> b >> c;
+    if (a+b>c && b+c>a && a+c>b) {
+        if (a == b && b == c) {
+            cout << "tam giac deu" << endl;
+        }
+        else if (a==b || a==c || b==c) {
+            if (a*a == b*b + c*c|| b*b == a*a +c*c || c*c == a*a + b*b) {
+                cout << "vuong can " << endl;
+            }
+            cout << "tam giac can" << endl;
+        }
+        else if (a*a == b*b + c*c|| b*b == a*a +c*c || c*c == a*a + b*b) {
+            cout << "vuong  " << endl;
+        }
+        else {
+            cout << "tam giac thuong " << endl;
+        }
+    }
+    else {
+        cout << "INVALID" << endl;
+    }
 
-void bai30() {}
-void bai31() {}
-void bai32() {}
+}
+void bai27() {
+    int n;
+    cin >> n;
+    int year = n / 365;
+    int mode = n % 365;
+    int week = mode /7;
+    int day= mode % 7;
+    cout << year << " " << week  << " " << day << endl;
+
+}
+void bai28() {
+    int a, b, c;
+    cin >> a >> b >> c;
+    double dental = pow(b, 2)-4*a*c;
+    if ( dental < 0 ) {
+        cout << "NO" << endl;
+    }
+    else if (dental == 0) {
+        cout << fixed <<setprecision(2) << (float) -b/(2*a) << endl;
+    }
+    else if (a == 0 && b == 0 || c ==0) {
+        cout << "luoi qua tu giai not di " << endl;
+    }
+    else {
+        float x1 = (-b + sqrt(dental))/(2*a);
+        float x2 = (-b - sqrt(dental))/(2*a);
+        cout << fixed << setprecision (2) << x1 << " " << x2 << endl;
+    }
+
+}
+void bai29() {
+    double a, b;
+    cin >> a >> b;
+    int c = b - a;
+    cout << c  << endl;
+}
+
+void bai30() {
+    long long a, b, c;
+    char d = 47 ;
+    cin >> a >> b >> c;
+    if (a/b==c || b/c==a || c/a==b) {
+        cout << d << endl;
+    }
+    else {
+        cout << "NOSOL" << endl;
+    }
+}
+void bai31() {
+    double a, b, c, d;
+    cin >> a >> b >> c >> d;
+    double e = (a+b+c*2+d*3)/7.0;
+    if (e>=8) {
+        cout << "very good" << endl;
+    }
+    else if (e >= 6.5) {
+        cout << "good" << endl;
+    }
+    else if (e >= 5) {
+        cout << "trung binh " << endl;
+    }
+    else if (e<5) {
+        cout << "kem" << endl;
+    }
+}
+void bai32() {
+    long long a, b, c, d , e, min2;
+    cin >> a >> b >> c >> d >> e;
+
+    long long min1 = min({a, b, c, d, e});
+    if (a == min1) {
+        min2 = min({b, c, d, e});
+    } else if (b == min1) {
+        min2 = min({a, c, d, e});
+    } else if (c == min1) {
+        min2 = min({a, b, d, e});
+    } else if (d == min1) {
+        min2 = min({a, b, c, e});
+    } else {
+        min2 = min({a, b, c, d});
+    }
+    cout << min2 << endl;
+
+}
 
 int main() {
     // bai1();
@@ -296,6 +406,6 @@ int main() {
     // bai9();
     // value_moth();
     // structure_case();
-    bai24();
+    bai32();
     return 0;
 }
