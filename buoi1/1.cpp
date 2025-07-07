@@ -165,21 +165,124 @@ void bai15() {
     cout << l1 << endl;
 
 }
-void bai16() {}
-void bai17() {}
-void bai18() {}
-void bai19() {}
-void bai20() {}
+void bai16() {
+    int a;
+    cin >> a;
+    if ( a % 400 == 0 || a % 4 == 0 && a % 100 != 0 ) {
+        cout << "YES" << endl;
+    }
+    else if ( a <= 0 ) {
+        cout << "INVALID" <<endl;
+    }
+    else {
+        cout << "NO" << endl;
+    }
+}
 
-void bai21() {}
-void bai22() {}
-void bai23() {}
-void bai24() {}
+void bai17() {
+    int a , b;
+    cin >> a >> b ;
+    if ( a <=0 || b <= 0 || a > 12 ) {
+        cout << "INVALID" <<endl;
+    }
+    else if (a == 1 || a == 3 || a==5 || a==7 || a==8 || a==10 || a==12) {
+        cout << "31 days in years" << endl;
+    }
+    else if (a == 4 || a==6 || a==9 || a==11) {
+        cout << "30 days in years" << endl;
+    }
+    else {
+        if ( b % 400 == 0 || (b % 4 == 0 && b % 100 != 0 ) ) {
+        cout <<  "29 days in years " << endl;
+        }
+        else {
+            cout << "28 days in years " << endl;
+        }
+
+
+    }
+}
+
+void bai18() {
+    char c ; cin >> c;
+    if (c >= 97 && c <= 122) {
+        cout << "YES" << endl;
+    }
+    else {
+        cout << "NO" <<endl;
+    }
+
+}
+
+void bai19() {
+    char c; cin >> c;
+    if (c >= 65 && c <= 90) {
+        cout << "YES" << endl;
+    }
+    else {
+        cout << "NO" <<endl;
+    }
+}
+void bai20() {
+    char c ; cin >> c;
+    if ( c >= 65 && c <= 90 || c >= 97 && c <= 122) {
+        cout << "YES" << endl;
+    }
+    else {
+        cout << "NO" << endl;
+    }
+}
+
+void bai21() {
+    char c ; cin >> c;
+    if ( c >= 48 && c <= 57 ) {
+        cout << "YES" << endl;
+    }
+    else {
+        cout << "NO" << endl;
+    }
+}
+void bai22() {
+    char c ; cin >> c;
+    if ( c >= 'A' && c <= 'Z' ) {
+        c += 32;
+    }
+    cout << c << endl;
+}
+void bai23() {
+    char c ; cin >> c;
+    if (c >= 'a' && c <= 'z') {
+        c -= 32;
+    }
+    cout << c << endl;
+}
+
+void bai24() {
+    char c ; cin >> c;
+    if (c >= 'A' && c <= 'Z') {
+        if (c == 'Z') {
+            c += 7;
+            cout << c << endl;
+            // exit;
+        }
+        c += 33;
+        cout << c << endl;
+    }
+    else if (c >= '0' && c <= '9') {
+        c += 60;
+        cout << c << endl;
+    }
+    else {
+        cout << "ERROR" << endl;
+    }
+}
+
 void bai25() {}
 void bai26() {}
 void bai27() {}
 void bai28() {}
 void bai29() {}
+
 void bai30() {}
 void bai31() {}
 void bai32() {}
@@ -193,6 +296,6 @@ int main() {
     // bai9();
     // value_moth();
     // structure_case();
-    bai15();
+    bai24();
     return 0;
 }
