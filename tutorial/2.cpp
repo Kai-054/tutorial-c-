@@ -85,7 +85,6 @@ int ex3(int n) {
     return sum;
 }
 
-
 double ex4(int n) {
     double sum = 0;
     for (int i=1; i<=n; i++ ) {
@@ -100,14 +99,53 @@ void ex4_1(int n) {
     }
     cout<<fixed<<setprecision(2)<<sum<<endl;
 }
+
+void ex5(int n) {
+    double sum = 0;
+    for (int i=1; i<=n; i++ ) {
+        sum += 1.0/(2.0*i);
+        cout << "i=" << i << " " << sum << endl;
+    }
+    cout << fixed << setprecision(2)<<sum << endl;
+}
+
+void ex6(int n) {
+    double sum = 0;
+    for (int i=1; i<=n; i++ ) {
+        sum += pow(-1.0, (n*n) );
+        cout << "i=" << i << " " << sum << endl;
+    }
+    cout <<sum << endl;
+}
+void ex7(){}
+void ex8(){}
+void ex9(){}
+void ex10(){}
+void ex11(){}
+void ex12(){}
+
+void ex13(){}
+void ex14(){}
+void ex15(){}
+void ex16(){}
+void ex17(){}
+void ex18(){}
+void ex19(){}
+void ex20(){}
+void ex21(){}
+void ex22(){}
+void ex23(){}
+void ex24(){}
+void ex25(){}
+
 int main () {
     // Draw();
     // int a, b ,c;
     // cin >> a >> b >> c;
     // cout << Solve (a, b, c) << endl;
     int a; cin >> a;
-    ex4_1(a);
-    double result = ex4(a);
-    cout << fixed << setprecision(2)<< result << endl;
+    ex6(a);
+    // double result = ex4(a);
+    // cout << fixed << setprecision(2)<< result << endl;
     return 0;
 }
