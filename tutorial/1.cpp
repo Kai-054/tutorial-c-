@@ -396,7 +396,11 @@ void bai32() {
     cout << min2 << endl;
 
 }
-
+void bai33() {
+    long long a;
+    cin >> a;
+    if (a % 2 == 0) {}
+}
 int main() {
     // bai1();
     // bai2();
